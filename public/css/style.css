@@ -2,7 +2,13 @@
 THÈME DE COULEUR
 ********************/
 body {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
   background-color: #608d99;
+}
+body h1 {
+  color: #42ffbe;
 }
 body header {
   background-color: #20a8cc;
