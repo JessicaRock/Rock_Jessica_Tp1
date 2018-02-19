@@ -40,7 +40,13 @@ body div#adresse h1 {
   margin-top: 30px;
 }
 body div#adresse table {
+  border-collapse: collapse;
   background-color: #ff8781;
+  margin: 30px;
+}
+body div#adresse table th,
+body div#adresse table td {
+  border: 2px solid #cc205a;
 }
 body div#adresse form {
   background-color: #ff8781;
