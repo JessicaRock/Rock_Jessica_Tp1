@@ -2,11 +2,11 @@
 THÈME DE COULEUR
 ********************/
 
-@bleu: #20A8CC;
-@bleuGris: #608D99;
-@vert: #42FFBE;
-@orange: #FF8781;
-@rose: #CC205A;
+@mauve: #CC4ED9;
+@mauveFonce: #2B112E;
+@jaune: #FFD861;
+@vert: #2AD1A8;
+@vertFonce: #31826E;
 
 
 
@@ -14,11 +14,16 @@ body {
   display: flex;
   flex-flow: column;
   align-items: stretch;
-  background-color: @bleuGris;
+  background-color: @mauveFonce;
+  color: #fff;
 
   h1 {
     color: @vert;
     margin: 0;
+  }
+
+  a {
+    color: #fff;
   }
 
   header {
@@ -26,7 +31,7 @@ body {
     justify-content: space-between;
     padding: 30px;
     padding-bottom: 0;
-    background-color: @bleu;
+    background-color: @vertFonce;
 
     nav {
       ul {
@@ -55,11 +60,10 @@ body {
     }
     table {
       border-collapse: collapse;
-      background-color: @orange;
       margin: 30px;
 
       th, td {
-        border: 2px solid @rose;
+        border: 2px solid @vertFonce;
         padding: 10px;
       }
     }
@@ -67,7 +71,6 @@ body {
     form {
       display: flex;
       flex-flow: column;
-      background-color: @orange;
       margin: 30px;
 
       label {
@@ -85,6 +88,6 @@ body {
 
 
   footer {
-    background-color: @rose;
+    background-color: @vertFonce;
   }
 }

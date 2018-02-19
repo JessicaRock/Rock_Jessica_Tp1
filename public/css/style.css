@@ -5,18 +5,22 @@ body {
   display: flex;
   flex-flow: column;
   align-items: stretch;
-  background-color: #608d99;
+  background-color: #2b112e;
+  color: #fff;
 }
 body h1 {
-  color: #42ffbe;
+  color: #2ad1a8;
   margin: 0;
+}
+body a {
+  color: #fff;
 }
 body header {
   display: flex;
   justify-content: space-between;
   padding: 30px;
   padding-bottom: 0;
-  background-color: #20a8cc;
+  background-color: #31826e;
 }
 body header nav ul {
   display: flex;
@@ -41,18 +45,16 @@ body div#adresse h1 {
 }
 body div#adresse table {
   border-collapse: collapse;
-  background-color: #ff8781;
   margin: 30px;
 }
 body div#adresse table th,
 body div#adresse table td {
-  border: 2px solid #cc205a;
+  border: 2px solid #31826e;
   padding: 10px;
 }
 body div#adresse form {
   display: flex;
   flex-flow: column;
-  background-color: #ff8781;
   margin: 30px;
 }
 body div#adresse form label {
@@ -64,5 +66,5 @@ body div#adresse form label input {
   margin-left: 30px;
 }
 body footer {
-  background-color: #cc205a;
+  background-color: #31826e;
 }
