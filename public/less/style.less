@@ -12,15 +12,35 @@ THÈME DE COULEUR
 body {
   display: flex;
   flex-flow: column;
-  align-items: center;
+  align-items: stretch;
   background-color: @bleuGris;
 
   h1 {
     color: @vert;
+    margin: 0;
   }
 
   header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    padding-bottom: 0;
     background-color: @bleu;
+
+    nav {
+      ul {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        li {
+          padding: 15px;
+          a {
+            text-decoration: none;
+          }
+        }
+      }
+    }
   }
 
   table {

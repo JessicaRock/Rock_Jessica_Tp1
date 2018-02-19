@@ -4,14 +4,31 @@ THÈME DE COULEUR
 body {
   display: flex;
   flex-flow: column;
-  align-items: center;
+  align-items: stretch;
   background-color: #608d99;
 }
 body h1 {
   color: #42ffbe;
+  margin: 0;
 }
 body header {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  padding-bottom: 0;
   background-color: #20a8cc;
+}
+body header nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+body header nav ul li {
+  padding: 15px;
+}
+body header nav ul li a {
+  text-decoration: none;
 }
 body table {
   background-color: #ff8781;
