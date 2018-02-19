@@ -1,3 +1,18 @@
+/********************
+THÈME DE COULEUR
+********************/
 body {
-  background-color: #ffcd42;
+  background-color: #608d99;
+}
+body header {
+  background-color: #20a8cc;
+}
+body table {
+  background-color: #ff8781;
+}
+body form {
+  background-color: #ff8781;
+}
+body footer {
+  background-color: #cc205a;
 }
