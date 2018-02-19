@@ -60,11 +60,25 @@ body {
 
       th, td {
         border: 2px solid @rose;
+        padding: 10px;
       }
     }
 
     form {
+      display: flex;
+      flex-flow: column;
       background-color: @orange;
+      margin: 30px;
+
+      label {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+
+        input {
+          margin-left: 30px;
+        }
+      }
     }
   }
 

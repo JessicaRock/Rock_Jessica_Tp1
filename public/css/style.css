@@ -47,9 +47,21 @@ body div#adresse table {
 body div#adresse table th,
 body div#adresse table td {
   border: 2px solid #cc205a;
+  padding: 10px;
 }
 body div#adresse form {
+  display: flex;
+  flex-flow: column;
   background-color: #ff8781;
+  margin: 30px;
+}
+body div#adresse form label {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+body div#adresse form label input {
+  margin-left: 30px;
 }
 body footer {
   background-color: #cc205a;
