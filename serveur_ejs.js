@@ -70,7 +70,7 @@ app.get('/ajouter', function(req, res) {
 /////////////////////////////////////////////////////////////////////////// MODIFIER
 app.post('/modifier', function(req, res) {
 
-    var oModif = {
+    let oModif = {
         "_id": ObjectID(req.body['_id']),
         nom: req.body.nom,
         prenom: req.body.prenom,
@@ -93,7 +93,7 @@ app.post('/modifier', function(req, res) {
 /////////////////////////////////////////////////////////////////////////// SUPPRIMER
 app.get('/supprimer/:id', (req, res) => {
 
-    var id = req.params.id;
+    let id = req.params.id;
     db.collection('adresse').findOneAndDelete({ "_id": ObjectID(req.params.id) }, (err, resultat) => {
 
         if (err) return console.log(err);
@@ -126,6 +126,24 @@ app.get('/trier/:cle/:ordre', function(req, res) {
 
         console.log('util = ' + util.inspect(resultat));
         res.render('membres.ejs', { membres: resultat, ordre_url: ordre });
+    });
+});
+
+
+
+
+/////////////////////////////////////////////////////////////////////////// AFFICHER
+app.get('/afficher/:id', (req, res) => {
+
+    let id = req.params.id;
+
+    db.collection('adresse').findOne({"_id" : ObjectID(id)}, function(err, resultat) {
+
+        if (err) return console.log(err);
+
+        // transfert du contenu vers la vue gabarit.ejs (renders)
+        // affiche le contenu de la BD
+        res.render('composants/membre.ejs', { membre: resultat });
     });
 });
 
