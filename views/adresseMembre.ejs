@@ -1,20 +1,11 @@
-<div id="adresse">
-	<h1>Fiche du membre</h1>
-	<h2><%= membre['prenom'] %> <%= membre['nom'] %></h2>
-	<table class="tableau">
-		<tr>
-			<th>_id</th>
-			<th>Prénom</th>
-			<th>Nom</th>
-			<th>Téléphone</th>
-			<th>Courriel</th>
-		</tr>
-		<tr>
-			<td><%= membre._id %></td>
-			<th><%= membre.prenom %></th>
-			<th><%= membre.nom %></th>
-			<td><%= membre.telephone %></td>
-			<td><%= membre.courriel %></td>
-		</tr>
-	</table>
-</div>
+<!DOCTYPE html>
+<html lang="fr">
+<%- include('composants/head.ejs') %>
+
+	<body>
+		<%- include('composants/entete.ejs') %>
+		<%- include('composants/membre.ejs') %>
+		<%- include('composants/footer.ejs') %>
+	</body>
+
+</html>

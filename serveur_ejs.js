@@ -143,7 +143,7 @@ app.get('/afficher/:id', (req, res) => {
 
         // transfert du contenu vers la vue gabarit.ejs (renders)
         // affiche le contenu de la BD
-        res.render('composants/membre.ejs', { membre: resultat });
+        res.render('adresseMembre.ejs', { membre: resultat });
     });
 });
 
