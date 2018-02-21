@@ -4,13 +4,41 @@ const app = express();
 const bodyParser = require('body-parser');
 const MongoClient = require('mongodb').MongoClient; // le pilote MongoDB
 const ObjectID = require('mongodb').ObjectID;
-var util = require("util");
+
+const peupler = require('./mes_modules/peupler');//./mes_modules/peupler/index.js
+
+const util = require("util");
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
 /* on associe le moteur de vue au module «ejs» */
 app.set('view engine', 'ejs'); // générateur de template
+
+
+
+
+
+
+app.get('/peuplement', function (req, res) {
+    console.log(__dirname);
+    let aoNouvAdd = peupler();
+    console.log(aoNouvAdd);
+
+    let iLongueur = aoNouvAdd.length;
+    for(let i = 0; i<iLongueur; i++) {
+        db.collection('adresse').save(aoNouvAdd[i], (err, result) => {
+            if (err) return console.log(err)
+            console.log('sauvegarder dans la BD')
+
+        })
+    }
+
+    res.redirect('/membres');
+})
+
+
+
 
 
 app.get('/formulaire', function(req, res) {
