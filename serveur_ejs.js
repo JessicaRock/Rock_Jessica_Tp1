@@ -133,18 +133,20 @@ app.get('/trier/:cle/:ordre', function(req, res) {
 
 
 /////////////////////////////////////////////////////////////////////////// AFFICHER
-app.get('/afficher/:id', (req, res) => {
-
-    let id = req.params.id;
-
-    db.collection('adresse').findOne({"_id" : ObjectID(id)}, function(err, resultat) {
+app.post('/rechercher', (req, res) => {
+    let recherche = req.body.recherche;
+    console.log(recherche)
+    
+   db.collection('adresse').find({$or: [{"prenom": recherche}, {"nom" : recherche}, {"telephone" : recherche}, {"courriel" : recherche}]}).toArray(function(err, resultat){
 
         if (err) return console.log(err);
 
-        // transfert du contenu vers la vue gabarit.ejs (renders)
-        // affiche le contenu de la BD
-        res.render('adresseMembre.ejs', { membre: resultat });
-    });
+        console.log('***********************')
+        //console.log(resultat);
+        console.log('util = ' + util.inspect(resultat));
+
+        res.render('adresseMembre.ejs', { membres: resultat });
+    })
 });
 
 
