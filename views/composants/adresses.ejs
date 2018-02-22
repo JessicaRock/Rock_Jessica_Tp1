@@ -12,9 +12,6 @@
 					<% if (noLigne==0){ %>
 						<tr>
 							<% noLigne++ %>
-							<!--<% for (p in element){ %>
-			 				<th><a href=http://localhost:8081/trier/<%= p %>/asc ><%= p %></a></th>
-			 				<% } %>-->
 							<th><a href=http://localhost:8081/trier/_id/<%= ordre_url %> >_id</a></th>
 							<th><a href=http://localhost:8081/trier/prenom/<%= ordre_url %> >prenom</a></th>
 							<th><a href=http://localhost:8081/trier/nom/<%= ordre_url %> >nom</a></th>
@@ -30,7 +27,7 @@
 					
 				<% for (elm of membres) {%>
 					<tr>
-						<td><!--<a href=http://localhost:8081/afficher/<%= elm._id %>>--><%= elm._id %></a></td>
+						<td><%= elm._id %></a></td>
 						<th contenteditable><%= elm.prenom %></th>
 						<th contenteditable><%= elm.nom %></th>
 						<td contenteditable><%= elm.telephone %></td>
