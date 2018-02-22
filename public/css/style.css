@@ -2,9 +2,11 @@
 THÈME DE COULEUR
 ********************/
 body {
+  min-height: 100vh;
   display: flex;
   flex-flow: column;
   align-items: stretch;
+  justify-content: space-between;
   background-color: #2b112e;
   background-image: url(img/bg.png);
   background-repeat: repeat-x;
@@ -14,6 +16,7 @@ body {
 body h1 {
   color: #2ad1a8;
   margin: 0;
+  text-align: center;
 }
 body a {
   color: #fff;
