@@ -69,7 +69,7 @@ app.get('/ajouter', function(req, res) {
 
 /////////////////////////////////////////////////////////////////////////// MODIFIER
 app.post('/modifier', function(req, res) {
-/*
+    /*
     let oModif = {
         "_id": ObjectID(req.body['_id']),
         nom: req.body.nom,
@@ -78,6 +78,7 @@ app.post('/modifier', function(req, res) {
         courriel: req.body.courriel
     };
     */
+    
     console.log('/modifier');
     req.body._id = ObjectID(req.body._id)
 
