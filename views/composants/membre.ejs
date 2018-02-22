@@ -1,32 +1,35 @@
-
 <div id="adresse">
-<table class="tableau">
-		<% let noLigne = 0 %>
-		<% if(typeof ordre_url == 'undefined') {ordre_url = 'asc'} %>
-			<% for(element of membres){ %>
-				<% if (noLigne==0){ %>
+	<% if(membres.length != 0) { %>
+		<table class="tableau">
+			<% let noLigne = 0 %>
+			<% if(typeof ordre_url == 'undefined') {ordre_url = 'asc'} %>
+				<% for(element of membres){ %>
+					<% if (noLigne==0){ %>
+						<tr>
+							<% noLigne++ %>
+							<!--<% for (p in element){ %>
+			 				<th><a href=http://localhost:8081/trier/<%= p %>/asc ><%= p %></a></th>
+			 				<% } %>-->
+							<th><a href=http://localhost:8081/trier/_id/<%= ordre_url %> >_id</a></th>
+							<th><a href=http://localhost:8081/trier/prenom/<%= ordre_url %> >prenom</a></th>
+							<th><a href=http://localhost:8081/trier/nom/<%= ordre_url %> >nom</a></th>
+							<th><a href=http://localhost:8081/trier/telephone/<%= ordre_url %> >telephone</a></th>
+							<th><a href=http://localhost:8081/trier/courriel/<%= ordre_url %> >courriel</a></th>
+						</tr>
+					<% } %>
+				<% } %>
+					
+				<% for (elm of membres) {%>
 					<tr>
-						<% noLigne++ %>
-						<!--<% for (p in element){ %>
-		 				<th><a href=http://localhost:8081/trier/<%= p %>/asc ><%= p %></a></th>
-		 				<% } %>-->
-						<th><a href=http://localhost:8081/trier/_id/<%= ordre_url %> >_id</a></th>
-						<th><a href=http://localhost:8081/trier/prenom/<%= ordre_url %> >prenom</a></th>
-						<th><a href=http://localhost:8081/trier/nom/<%= ordre_url %> >nom</a></th>
-						<th><a href=http://localhost:8081/trier/telephone/<%= ordre_url %> >telephone</a></th>
-						<th><a href=http://localhost:8081/trier/courriel/<%= ordre_url %> >courriel</a></th>
+						<td><!--<a href=http://localhost:8081/afficher/<%= elm._id %>>--><%= elm._id %></a></td>
+						<th><%= elm.prenom %></th>
+						<th><%= elm.nom %></th>
+						<td><%= elm.telephone %></td>
+						<td><%= elm.courriel %></td>
 					</tr>
 				<% } %>
-			<% } %>
-				
-			<% for (elm of membres) {%>
-				<tr>
-					<td><!--<a href=http://localhost:8081/afficher/<%= elm._id %>>--><%= elm._id %></a></td>
-					<th><%= elm.prenom %></th>
-					<th><%= elm.nom %></th>
-					<td><%= elm.telephone %></td>
-					<td><%= elm.courriel %></td>
-				</tr>
-			<% } %>
-	</table>
-	</div>
+		</table>
+	<% } else { %>
+		<h2>Aucun résultat n'a été trouvé.</h2>
+	<% } %>
+</div>
