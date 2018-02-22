@@ -78,7 +78,7 @@ app.post('/modifier', function(req, res) {
         courriel: req.body.courriel
     };
     */
-console.log('/modifier');
+    console.log('/modifier');
     req.body._id = ObjectID(req.body._id)
 
     db.collection('adresse').save(req.body, (err, result) => {
@@ -135,7 +135,7 @@ app.get('/trier/:cle/:ordre', function(req, res) {
 
 
 
-/////////////////////////////////////////////////////////////////////////// AFFICHER
+/////////////////////////////////////////////////////////////////////////// RECHERCHER
 app.post('/rechercher', (req, res) => {
     let recherche = req.body.recherche;
     console.log(recherche)
@@ -148,7 +148,24 @@ app.post('/rechercher', (req, res) => {
         //console.log(resultat);
         console.log('util = ' + util.inspect(resultat));
 
-        res.render('adresseMembre.ejs', { membres: resultat });
+        res.render('listeRecherche.ejs', { membres: resultat });
+    })
+});
+
+
+/////////////////////////////////////////////////////////////////////////// AFFICHER
+app.get('/afficher/:id', (req, res) => {
+    let id = req.params.id;
+    console.log(id);
+   db.collection('adresse').findOne({"_id" : ObjectID(id)}, function(err, resultat){
+
+        if (err) return console.log(err);
+
+        console.log('***********************')
+        //console.log(resultat);
+        console.log('util = ' + util.inspect(resultat));
+
+        res.render('adresseMembre.ejs', { membre: resultat });
     })
 });
 

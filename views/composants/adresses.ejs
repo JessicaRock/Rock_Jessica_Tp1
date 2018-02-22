@@ -27,7 +27,7 @@
 					
 				<% for (elm of membres) {%>
 					<tr>
-						<td><%= elm._id %></a></td>
+						<td><a href="/afficher/<%= elm._id %>"><%= elm._id %></a></td>
 						<th contenteditable><%= elm.prenom %></th>
 						<th contenteditable><%= elm.nom %></th>
 						<td contenteditable><%= elm.telephone %></td>
