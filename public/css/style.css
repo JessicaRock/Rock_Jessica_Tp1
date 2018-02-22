@@ -12,11 +12,15 @@ body {
   background-repeat: repeat-x;
   background-position: bottom;
   color: #fff;
+  font-family: Open Sans;
 }
 body h1 {
   color: #2ad1a8;
   margin: 0;
   text-align: center;
+}
+body h1#accueil {
+  font-size: 800%;
 }
 body a {
   color: #fff;
@@ -74,6 +78,11 @@ body div#adresse form label {
 body div#adresse form label input {
   margin-left: 30px;
 }
+body div#adresse form#formModif {
+  padding: 0;
+  margin: 0;
+}
 body footer {
   background-color: #31826e;
+  text-align: center;
 }

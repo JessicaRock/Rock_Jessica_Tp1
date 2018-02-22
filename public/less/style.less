@@ -21,11 +21,16 @@ body {
   background-repeat: repeat-x;
   background-position: bottom;
   color: #fff;
+  font-family: Open Sans;
 
   h1 {
     color: @vert;
     margin: 0;
     text-align: center;
+
+    &#accueil {
+      font-size: 800%;
+    }
   }
 
   a {
@@ -91,6 +96,12 @@ body {
           margin-left: 30px;
         }
       }
+
+      &#formModif {
+        padding: 0;
+        margin: 0;
+      }
+
     }
   }
 
@@ -98,5 +109,6 @@ body {
 
   footer {
     background-color: @vertFonce;
+    text-align: center;
   }
 }
