@@ -69,7 +69,7 @@ app.get('/ajouter', function(req, res) {
 
 /////////////////////////////////////////////////////////////////////////// MODIFIER
 app.post('/modifier', function(req, res) {
-
+/*
     let oModif = {
         "_id": ObjectID(req.body['_id']),
         nom: req.body.nom,
@@ -77,8 +77,11 @@ app.post('/modifier', function(req, res) {
         telephone: req.body.telephone,
         courriel: req.body.courriel
     };
+    */
+console.log('/modifier');
+    req.body._id = ObjectID(req.body._id)
 
-    db.collection('adresse').save(oModif, (err, result) => {
+    db.collection('adresse').save(req.body, (err, result) => {
 
         if (err) return console.log(err);
         console.log('sauvegarder dans la BD');
@@ -136,7 +139,7 @@ app.get('/trier/:cle/:ordre', function(req, res) {
 app.post('/rechercher', (req, res) => {
     let recherche = req.body.recherche;
     console.log(recherche)
-    
+
    db.collection('adresse').find({$or: [{"prenom": recherche}, {"nom" : recherche}, {"telephone" : recherche}, {"courriel" : recherche}]}).toArray(function(err, resultat){
 
         if (err) return console.log(err);

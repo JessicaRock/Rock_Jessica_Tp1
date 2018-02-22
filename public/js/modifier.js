@@ -2,10 +2,12 @@
 		console.log('click modifier');
 		let aBtnModifier = document.querySelectorAll('.modifier');
 
+			console.log(aBtnModifier.length);
 			console.log(aBtnModifier);
 		for (elm of aBtnModifier) {
 			elm.addEventListener('click', function(){
 
+			console.log('clique');
 
 				let tr = this.parentNode.parentNode;
 				let id = tr.children[0].innerHTML;
