@@ -3,10 +3,19 @@ THÈME DE COULEUR
 ********************/
 body {
   min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column;
-  align-items: stretch;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: #2b112e;
   background-image: url(img/bg.png);
   background-repeat: repeat-x;
@@ -29,9 +38,16 @@ body a {
   text-decoration: none;
 }
 body header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column;
-  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   padding: 30px;
   padding-bottom: 0;
   background-color: #31826e;
@@ -41,6 +57,8 @@ body header h1 {
   font-size: 35px;
 }
 body header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   list-style-type: none;
   margin: 0;
@@ -51,15 +69,23 @@ body header nav ul li {
   margin-right: 30px;
 }
 body header nav ul li a {
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 body header nav ul li a:hover {
   color: #ffd861;
 }
 body div#adresse {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 50px;
 }
 body div#adresse h1 {
@@ -103,13 +129,18 @@ body div#adresse nav#gererAdd {
   width: 60%;
 }
 body div#adresse nav#gererAdd ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 body div#adresse nav#gererAdd ul li {
   list-style-type: none;
   background-color: #2b112e;
   padding: 20px 70px;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 body div#adresse nav#gererAdd ul li:hover {
@@ -120,15 +151,24 @@ body div#adresse nav#gererAdd ul li a {
   text-transform: uppercase;
 }
 body div#adresse form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
   margin: 30px;
   padding: 15px;
   background-color: #2b112e;
 }
 body div#adresse form label {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 10px;
 }
 body div#adresse form label input {
@@ -146,6 +186,7 @@ body div#adresse form input[type='submit'] {
   font-size: 12px;
   margin: 10px auto;
   color: #ffd861;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   cursor: pointer;
 }
@@ -169,14 +210,19 @@ body footer {
 }
 @media screen and (min-width: 625px) {
   body header {
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   body header nav {
     margin: 0;
     margin-top: 20px;
   }
   body header nav ul {
-    flex-flow: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
   }
   body header nav ul li {
     margin: 0;
@@ -185,9 +231,16 @@ body footer {
 }
 @media screen and (min-width: 1024px) {
   body header {
-    flex-flow: row;
-    justify-content: space-between;
-    align-items: flex-end;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
   body header nav {
     margin-top: 0;
