@@ -40,6 +40,13 @@
 	<% } else { %>
 		<h2>Aucun membre n'est enregistré.</h2>
 	<% } %>
+
+	<nav id="gererAdd">
+		<ul>
+			<li><a href="http://localhost:8081/peuplement">Peuplement</a></li>
+			<li><a href="http://localhost:8081/vider">Vider</a></li>
+		</ul>
+	</nav>
 	<form name="formModif" id='formModif' action="/modifier" method="POST">
 		<input type="hidden" name="_id">
 		<input type="hidden" name="prenom">
