@@ -11,13 +11,15 @@ body {
   background-image: url(img/bg.png);
   background-repeat: repeat-x;
   background-position: bottom;
+  background-attachment: fixed;
   color: #fff;
-  font-family: Open Sans;
+  font-family: Roboto;
 }
 body h1 {
   color: #2ad1a8;
   margin: 0;
   text-align: center;
+  font-size: 50px;
 }
 body h1#accueil {
   font-size: 800%;
@@ -32,6 +34,10 @@ body header {
   padding-bottom: 0;
   background-color: #31826e;
 }
+body header h1 {
+  color: #fff;
+  font-size: 35px;
+}
 body header nav ul {
   display: flex;
   list-style-type: none;
@@ -43,6 +49,10 @@ body header nav ul li {
 }
 body header nav ul li a {
   text-decoration: none;
+  transition: all 0.3s;
+}
+body header nav ul li a:hover {
+  color: #ffd861;
 }
 body div#adresse {
   display: flex;
@@ -53,15 +63,39 @@ body div#adresse {
 body div#adresse h1 {
   margin-top: 30px;
 }
+body div#adresse a {
+  cursor: pointer;
+}
 body div#adresse table {
   background-color: #2b112e;
   border-collapse: collapse;
   margin: 30px;
 }
-body div#adresse table th,
-body div#adresse table td {
+body div#adresse table tr:nth-child(odd) {
+  background-color: #31826e;
+}
+body div#adresse table tr:nth-child(odd) th:focus,
+body div#adresse table tr:nth-child(odd) td:focus {
+  background-color: #2ad1a8;
+}
+body div#adresse table tr:nth-child(even) th:focus,
+body div#adresse table tr:nth-child(even) td:focus {
+  background-color: #7c2e85;
+}
+body div#adresse table tr th,
+body div#adresse table tr td {
   border: 2px solid #31826e;
   padding: 10px;
+  text-align: center;
+}
+body div#adresse table tr th a {
+  color: #ffd861;
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+body div#adresse table tr td a {
+  text-decoration: none;
+  color: #ffd861;
 }
 body div#adresse form {
   display: flex;
@@ -77,6 +111,31 @@ body div#adresse form label {
 }
 body div#adresse form label input {
   margin-left: 30px;
+}
+body div#adresse form input[type='text'] {
+  padding: 5px;
+  color: #2b112e;
+}
+body div#adresse form input[type='submit'] {
+  background-color: #2ad1a8;
+  border: 2px outset #31826e;
+  padding: 10px;
+  font-family: Open Sans;
+  font-size: 12px;
+  margin: 10px auto;
+  color: #ffd861;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+body div#adresse form input[type='submit']:hover {
+  background-color: #31826e;
+  color: #ffd861;
+  border: 3px inset #31826e;
+  margin: 9px auto;
+}
+body div#adresse form input:focus {
+  border: 2px solid #ffd861;
+  outline: none;
 }
 body div#adresse form#formModif {
   padding: 0;

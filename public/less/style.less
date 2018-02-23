@@ -2,7 +2,7 @@
 THÈME DE COULEUR
 ********************/
 
-@mauve: #CC4ED9;
+@mauve: #7c2e85;
 @mauveFonce: #2B112E;
 @jaune: #FFD861;
 @vert: #2AD1A8;
@@ -17,16 +17,19 @@ body {
   align-items: stretch;
   justify-content: space-between;
   background-color: @mauveFonce;
-  background-image: url(img/bg.png);
-  background-repeat: repeat-x;
-  background-position: bottom;
+    background-image: url(img/bg.png);
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-attachment: fixed;
   color: #fff;
-  font-family: Open Sans;
+  font-family: Roboto;
+
 
   h1 {
     color: @vert;
     margin: 0;
     text-align: center;
+    font-size: 50px;
 
     &#accueil {
       font-size: 800%;
@@ -44,6 +47,11 @@ body {
     padding-bottom: 0;
     background-color: @vertFonce;
 
+    h1 {
+      color: #fff;
+      font-size: 35px;
+    }
+
     nav {
       ul {
         display: flex;
@@ -54,6 +62,10 @@ body {
           padding: 15px;
           a {
             text-decoration: none;
+            transition: all 0.3s;
+            &:hover {
+              color: @jaune;
+            }
           }
         }
       }
@@ -69,14 +81,47 @@ body {
     h1 {
       margin-top: 30px;
     }
+
+    a {
+      cursor: pointer;
+    }
+
     table {
       background-color: @mauveFonce;
       border-collapse: collapse;
       margin: 30px;
 
-      th, td {
-        border: 2px solid @vertFonce;
-        padding: 10px;
+      tr {
+        &:nth-child(odd) {
+          background-color: @vertFonce;
+          th:focus, td:focus {
+            background-color: @vert;
+          }
+        }
+
+        &:nth-child(even) {
+          th:focus, td:focus {
+            background-color: @mauve;
+          }
+        }
+
+        th, td {
+          border: 2px solid @vertFonce;
+          padding: 10px;
+          text-align: center;
+        }
+
+        th a {
+          color: @jaune;
+          text-transform: uppercase;
+          font-size: 1.2em;
+        }
+
+        td a {
+          text-decoration: none;
+          color: @jaune;
+        }
+
       }
     }
 
@@ -95,6 +140,36 @@ body {
         input {
           margin-left: 30px;
         }
+
+      }
+
+      input[type='text'] {
+        padding:5px;
+        color: @mauveFonce;
+      }
+
+      input[type='submit'] {
+        background-color: @vert;
+        border: 2px outset @vertFonce;
+        padding: 10px;
+        font-family: Open Sans;
+        font-size: 12px;
+        margin: 10px auto;
+        color: @jaune;
+        transition: all 0.3s;
+        cursor: pointer;
+
+        &:hover {
+          background-color: @vertFonce;
+          color: @jaune;
+          border: 3px inset @vertFonce;
+          margin: 9px auto;
+        }
+      }
+
+      input:focus {
+        border: 2px solid @jaune;
+        outline: none;
       }
 
       &#formModif {
@@ -104,8 +179,6 @@ body {
 
     }
   }
-
-
 
   footer {
     background-color: @vertFonce;
